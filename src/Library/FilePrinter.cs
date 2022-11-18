@@ -4,9 +4,9 @@ namespace Full_GRASP_And_SOLID
 {
     public class FilePrinter : IPrinter
     {
-        public void PrintRecipe(Recipe recipe)
+        public void PrintRecipe(IRecipe receta)  //Le pasamos la interfaz como argumento
         {
-            File.WriteAllText("Recipe.txt", recipe.GetTextToPrint());
+            File.WriteAllText("Recipe.txt", receta.GetTextToPrint());
         }
     }
 }
